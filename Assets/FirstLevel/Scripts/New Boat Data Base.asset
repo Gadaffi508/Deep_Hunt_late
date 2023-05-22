@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57fd1fc1cc1a58948be7e18e3a980307, type: 3}
+  m_Name: New Boat Data Base
+  m_EditorClassIdentifier: 
+  boat:
+  - boatName: Holland
+    boatSprite: {fileID: 21300000, guid: 7240fb620ccc733479ac4dffed2797a8, type: 3}
+  - boatName: Franch
+    boatSprite: {fileID: 21300000, guid: cd34aee1d7ccc44429714bf43e84f3da, type: 3}
+  - boatName: "Turk\u0131sh"
+    boatSprite: {fileID: 21300000, guid: f4197c2ec74360647aa9e2e41713a243, type: 3}
+  - boatName: Germany
+    boatSprite: {fileID: 21300000, guid: 285f6fd697d402b4f910ce8e669b8743, type: 3}
