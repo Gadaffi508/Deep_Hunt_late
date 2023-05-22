@@ -9,6 +9,7 @@ public class BoatController : MonoBehaviour
     [Space]
     public Rigidbody2D rb;
     public float speed;
+    public int direction;
   
     public int Health;
     public int damage;
@@ -23,10 +24,34 @@ public class BoatController : MonoBehaviour
     [Header("Gold")]
     public  int gold;
 
+    [Space]
+    [Header("Data")]
+    public BoatDataBase boatdbs;
+    public Collider2D boatCollider;
+    public GameObject artworkObject;
+    public SpriteRenderer artworkSprite;
+
+    private int selectOption = 0;
+
+
     private void Awake()
     {
         current = this;
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        if (!PlayerPrefs.HasKey("selectOption"))
+        {
+            selectOption = 0;
+        }
+        else
+        {
+            Load();
+        }
+
+        UpdateBoat(selectOption);
     }
 
     void FixedUpdate()
@@ -39,11 +64,11 @@ public class BoatController : MonoBehaviour
 
         if (horizontal > 0)
         {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(direction, 1);
         }
         if (horizontal < 0)
         {
-            transform.localScale = new Vector2(-1, 1);
+            transform.localScale = new Vector2(direction*-1, 1);
         }
     }
     public void Regeneraiton()
@@ -86,6 +111,20 @@ public class BoatController : MonoBehaviour
             other.transform.parent = transform;
             Destroy(other.rigidbody);
         }
+    }
+
+    private void UpdateBoat(int selectedOption)
+    {
+        BoatChoose boatChoose = boatdbs.GetBoat(selectedOption);
+        artworkObject = boatChoose.boat;
+        artworkSprite.sprite = boatChoose.boatRender;
+        direction = boatChoose.direction;
+        boatCollider = boatChoose.boatCollider;
+    }
+
+    private void Load()
+    {
+        selectOption = PlayerPrefs.GetInt("selectOption");
     }
 
 }

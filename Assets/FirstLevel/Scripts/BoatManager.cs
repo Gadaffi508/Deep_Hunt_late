@@ -8,8 +8,10 @@ public class BoatManager : MonoBehaviour
 {
     public BoatDataBase boatdbs;
     public Text nameText;
+    public GameObject artworkObject;
     public SpriteRenderer artworkSprite;
-
+    public Collider2D boatCollider;
+    public int direction;
     private int selectOption = 0;
 
     private void Start()
@@ -53,7 +55,10 @@ public class BoatManager : MonoBehaviour
     private void UpdateBoat(int selectedOption)
     {
         BoatChoose boatChoose = boatdbs.GetBoat(selectedOption);
-        artworkSprite.sprite = boatChoose.boatSprite;
+        artworkObject = boatChoose.boat;
+        artworkSprite.sprite = boatChoose.boatRender;
+        boatCollider = boatChoose.boatCollider;
+        direction = boatChoose.direction;
         nameText.text = boatChoose.boatName;
     }
 

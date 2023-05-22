@@ -6,5 +6,8 @@ using UnityEngine;
 public class BoatChoose
 {
     public string boatName;
-    public Sprite boatSprite;
+    public GameObject boat;
+    public Sprite boatRender;
+    public Collider2D boatCollider;
+    public int direction;
 }

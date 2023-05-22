@@ -6,7 +6,7 @@ public class BoatGame : MonoBehaviour
 {
     public BoatDataBase boatdbs;
 
-    public SpriteRenderer artworkSprite;
+    public GameObject artworkObject;
 
     private int selectOption = 0;
 
@@ -27,7 +27,7 @@ public class BoatGame : MonoBehaviour
     private void UpdateBoat(int selectedOption)
     {
         BoatChoose boatChoose = boatdbs.GetBoat(selectedOption);
-        artworkSprite.sprite = boatChoose.boatSprite;
+        artworkObject = boatChoose.boat;
     }
 
     private void Load()
