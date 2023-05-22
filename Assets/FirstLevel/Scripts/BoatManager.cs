@@ -57,7 +57,7 @@ public class BoatManager : MonoBehaviour
         BoatChoose boatChoose = boatdbs.GetBoat(selectedOption);
         artworkObject = boatChoose.boat;
         artworkSprite.sprite = boatChoose.boatRender;
-        boatCollider = boatChoose.boatCollider;
+        boatCollider.offset = boatChoose.boatCollider.offset;
         direction = boatChoose.direction;
         nameText.text = boatChoose.boatName;
     }

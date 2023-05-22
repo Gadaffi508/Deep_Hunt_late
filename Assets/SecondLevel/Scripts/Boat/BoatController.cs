@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class BoatController : MonoBehaviour
   
     public int Health;
     public int damage;
+
 
     [Space]
     [Header("UI")]
@@ -30,14 +32,19 @@ public class BoatController : MonoBehaviour
     public Collider2D boatCollider;
     public GameObject artworkObject;
     public SpriteRenderer artworkSprite;
-
     private int selectOption = 0;
 
 
     private void Awake()
     {
+        //transforms = new List<Transform>();
         current = this;
         rb = GetComponent<Rigidbody2D>();
+        Transform[] gunPos = artworkObject.GetComponentsInChildren<Transform>();
+        for (int i = 1; i < gunPos.Length; i++)
+        {
+            Debug.Log(gunPos[i].name);
+        }
     }
 
     private void Start()
@@ -119,7 +126,7 @@ public class BoatController : MonoBehaviour
         artworkObject = boatChoose.boat;
         artworkSprite.sprite = boatChoose.boatRender;
         direction = boatChoose.direction;
-        boatCollider = boatChoose.boatCollider;
+        boatCollider.offset = boatChoose.boatCollider.offset;
     }
 
     private void Load()
