@@ -216,7 +216,7 @@ MonoBehaviour:
   ArcherRotation: {fileID: 3541845214805810315}
   enemyMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   bulletPrefab: {fileID: 8268947992135232424, guid: 2169fb26acb60204db4b7dfdf40ad7d4, type: 3}
   firingPoint: {fileID: 3541845216480507776}
   attackRange: 10

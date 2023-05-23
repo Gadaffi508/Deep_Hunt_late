@@ -1358,4 +1358,3 @@ MonoBehaviour:
   artworkSprite: {fileID: 1546491077507498387}
   boatCollider: {fileID: 1546491077507498385}
   direction: 0
-  gunner: []

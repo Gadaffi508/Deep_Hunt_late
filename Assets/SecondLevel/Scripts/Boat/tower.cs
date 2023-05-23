@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class tower : BoatTowerController
 {
-    public GameObject[] Tower;
+    public GameObject Tower;
 
     public override void CloseTower()
     {
-        foreach (GameObject tower in Tower)
-        {
-            tower.SetActive(false);
-        }
+       
     }
 
     public override void TowerBuilt()
     {
-        foreach (GameObject tower in Tower)
-        {
-            tower.SetActive(true);
-        }
+        Instantiate(Tower,transform.position,Quaternion.identity);
+        Destroy(gameObject);
     }
 }

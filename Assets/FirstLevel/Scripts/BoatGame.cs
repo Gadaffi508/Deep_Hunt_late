@@ -22,6 +22,7 @@ public class BoatGame : MonoBehaviour
         }
 
         UpdateBoat(selectOption);
+        Instantiate(artworkObject,transform.position,Quaternion.identity);
     }
 
     private void UpdateBoat(int selectedOption)

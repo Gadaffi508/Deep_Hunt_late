@@ -18,10 +18,10 @@ MonoBehaviour:
     boatRender: {fileID: 21300000, guid: cd34aee1d7ccc44429714bf43e84f3da, type: 3}
     boatCollider: {fileID: 1608807082651561912, guid: 5494c42585c79ed4899dbb0b667346ca, type: 3}
     direction: 1
-    boatcs: {fileID: 1608807082651561914, guid: 5494c42585c79ed4899dbb0b667346ca, type: 3}
+    "\u0131nstate": {fileID: 4942850376932654495, guid: feba35efb72532942992bd1b579bfad7, type: 3}
   - boatName: Franch
     boat: {fileID: 3563619576150474138, guid: 2beda5b7fb0a1904aa8cbe7c52c91cc9, type: 3}
     boatRender: {fileID: 21300000, guid: 7240fb620ccc733479ac4dffed2797a8, type: 3}
     boatCollider: {fileID: 3563619576150474142, guid: 2beda5b7fb0a1904aa8cbe7c52c91cc9, type: 3}
     direction: -1
-    boatcs: {fileID: 3563619576150474129, guid: 2beda5b7fb0a1904aa8cbe7c52c91cc9, type: 3}
+    "\u0131nstate": {fileID: 4942850376932654495, guid: bb721cabd81eb534f92ac3e86c8e333c, type: 3}
