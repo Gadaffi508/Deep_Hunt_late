@@ -13,7 +13,7 @@ public class tower : BoatTowerController
 
     public override void TowerBuilt()
     {
-        Instantiate(Tower,transform.position,Quaternion.identity);
+        Instantiate(Tower,transform.position,transform.rotation);
         Destroy(gameObject);
     }
 }

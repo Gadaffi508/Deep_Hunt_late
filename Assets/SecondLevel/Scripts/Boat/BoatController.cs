@@ -11,7 +11,11 @@ public class BoatController : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
     public int direction;
-  
+    private bool isFacingRight = true;
+
+    public float sagaDonmeAcisi = 0f;
+    public float solaDonmeAcisi = -180;
+
     public int Health;
     public int damage;
 
@@ -42,14 +46,14 @@ public class BoatController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontal * speed * Time.deltaTime, rb.velocity.y);
 
-        if (horizontal > 0)
+        if (horizontal > 0 && !isFacingRight)
         {
-            transform.localScale = new Vector2(direction, 1);
+            Flip();
         }
-        if (horizontal < 0)
+        else if (horizontal < 0 && isFacingRight)
         {
-            transform.localScale = new Vector2(direction*-1, 1);
-        }
+            Flip();
+        } transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
     public void Regeneraiton()
     {
@@ -91,6 +95,13 @@ public class BoatController : MonoBehaviour
             other.transform.parent = transform;
             Destroy(other.rigidbody);
         }
+    }
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -direction;
+        transform.localScale = scale;
     }
 
 }

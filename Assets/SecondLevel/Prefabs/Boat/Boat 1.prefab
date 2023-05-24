@@ -142,6 +142,8 @@ MonoBehaviour:
   rb: {fileID: 1608807082651561913}
   speed: 150
   direction: 1
+  sagaDonmeAcisi: 20
+  solaDonmeAcisi: -120
   Health: 100
   damage: 15
   healthText: {fileID: 0}
@@ -204,6 +206,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
+      propertyPath: Tower
+      value: 
+      objectReference: {fileID: 21210942353340201, guid: feba35efb72532942992bd1b579bfad7, type: 3}
     - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
       propertyPath: OpenTowerObject.m_Bits
       value: 576
@@ -311,6 +317,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
+      propertyPath: Tower
+      value: 
+      objectReference: {fileID: 21210942353340201, guid: feba35efb72532942992bd1b579bfad7, type: 3}
+    - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
       propertyPath: OpenTowerObject.m_Bits
       value: 576
       objectReference: {fileID: 0}
@@ -328,6 +338,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5405113573087445419, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405113573087445419, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
+      propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5405113573087445419, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}

@@ -11,6 +11,8 @@ TagManager:
   - Panel
   - Text1
   - Text2
+  - Clamb
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - UI
   - gunner
   - gun
-  - 
+  - Enemy
   - 
   - 
   - 

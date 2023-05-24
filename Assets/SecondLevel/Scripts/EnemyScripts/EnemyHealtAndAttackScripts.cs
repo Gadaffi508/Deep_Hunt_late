@@ -14,16 +14,6 @@ public class EnemyHealtAndAttackScripts : MonoBehaviour
         currentHealth = EnemyHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(EnemyAttack);
-        }
-       
-    }
-
     private void TakeDamage(float damage)
     {
         currentHealth -= damage;

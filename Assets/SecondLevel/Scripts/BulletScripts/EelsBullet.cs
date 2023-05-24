@@ -34,8 +34,8 @@ public class EelsBullet : MonoBehaviour
 
     IEnumerator Timer()
     {
-        archerTower.bps = 0;
+        //archerTower.bps = 0;
         yield return new WaitForSeconds(0.5f);
-        archerTower.bps = 1;
+        //archerTower.bps = 1;
     }
 }

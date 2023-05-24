@@ -12,6 +12,11 @@ public class ArrowScripts : MonoBehaviour
 
     private Transform target;
 
+    private void Start()
+    {
+        Destroy(gameObject,3f);
+    }
+
     public void SetTarget(Transform _target)
     {
         target = _target;
@@ -26,10 +31,6 @@ public class ArrowScripts : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(other.gameObject);
-        }
         Destroy(gameObject);
         
     }
