@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8469356192777683938}
   m_Layer: 0
   m_Name: Boat
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   rb: {fileID: 3563619576150474128}
   speed: 150
   direction: -1
+  isFacingRight: 1
   Health: 100
   damage: 15
   healthText: {fileID: 0}

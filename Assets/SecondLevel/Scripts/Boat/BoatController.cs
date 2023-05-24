@@ -11,10 +11,7 @@ public class BoatController : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
     public int direction;
-    private bool isFacingRight = true;
-
-    public float sagaDonmeAcisi = 0f;
-    public float solaDonmeAcisi = -180;
+    public bool isFacingRight = true;
 
     public int Health;
     public int damage;

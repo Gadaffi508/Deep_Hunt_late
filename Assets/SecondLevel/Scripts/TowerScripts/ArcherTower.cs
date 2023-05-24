@@ -19,10 +19,12 @@ public class ArcherTower : MonoBehaviour
     public float sagaDonmeAcisi = 20f;
     public float solaDonmeAcisi = 120f;
 
+    BoatController boat;
+
     private void Start()
     {
         enemyLayer = LayerMask.NameToLayer("Enemy");
-
+        boat = GameObject.FindGameObjectWithTag("Ship").gameObject.GetComponent<BoatController>();
     }
 
     private void Update()
@@ -43,7 +45,7 @@ public class ArcherTower : MonoBehaviour
         if (nearestEnemy != null)
         {
             Transform enemy = nearestEnemy.GetComponent<Transform>();
-            
+
             if (nextPrefab >= 1.5f)
             {
                 ProjectTileFire(enemy);
@@ -51,9 +53,9 @@ public class ArcherTower : MonoBehaviour
 
             }
 
-            Vector3 directionToCircle = nearestEnemy.position - transform.position;
-            float angle = Mathf.Atan2(directionToCircle.y, directionToCircle.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Facing(enemy);
+            
+
         }
 
     }
@@ -68,5 +70,25 @@ public class ArcherTower : MonoBehaviour
         ArrowScripts arrowScripts = row.GetComponent<ArrowScripts>();
         arrowScripts.SetTarget(target);
 
+    }
+    public void Facing(Transform enemy)
+    {
+        Vector3 barrelPosition = transform.position;
+
+        // Düþman hedefinin yönüne doðru bakma
+        Vector3 targetDirection = enemy.position - barrelPosition;
+        float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
+
+        // Namlunun yavaþça düþman hedefine doðru dönmesi
+        if (boat.isFacingRight)
+        {
+            Quaternion targetRotation = Quaternion.Euler(0f, 0f, targetAngle);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+        }
+        else
+        {
+            Quaternion targetRotation = Quaternion.Euler(0f, 0f, targetAngle + 180);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+        }
     }
 }
