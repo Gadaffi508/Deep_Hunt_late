@@ -13,6 +13,8 @@ TagManager:
   - Text2
   - Clamb
   - Enemy
+  - Gold
+  - healthText
   layers:
   - Default
   - TransparentFX

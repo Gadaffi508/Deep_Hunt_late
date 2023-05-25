@@ -23,15 +23,14 @@ public class ArrowScripts : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(!target) return;
-
-        Vector2 direction = (target.position - transform.position).normalized;
-
-        rb.velocity = direction * rowSpeed;
+        if(!target) Destroy(gameObject);
+        transform.position = Vector2.MoveTowards(transform.position, target.position, rowSpeed * Time.deltaTime);
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
-        Destroy(gameObject);
-        
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -20,8 +20,16 @@ public class EnemyHealtAndAttackScripts : MonoBehaviour
       
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
-            Debug.Log("Bu adma öldü");
+            BoatController.current.gold += 20;
+            Destroy(gameObject,0.5f);
+
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Arrow"))
+        {
+            TakeDamage(20);
         }
     }
 }

@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class ArcherTower : MonoBehaviour
 {
@@ -10,6 +6,8 @@ public class ArcherTower : MonoBehaviour
 
     public Transform nearestEnemy;
     private int enemyLayer;
+
+    public Transform rotateFire;
 
     public GameObject Bullet;
     public Transform FirePos;
@@ -25,6 +23,7 @@ public class ArcherTower : MonoBehaviour
     {
         enemyLayer = LayerMask.NameToLayer("Enemy");
         boat = GameObject.FindGameObjectWithTag("Ship").gameObject.GetComponent<BoatController>();
+        
     }
 
     private void Update()
@@ -73,22 +72,21 @@ public class ArcherTower : MonoBehaviour
     }
     public void Facing(Transform enemy)
     {
-        Vector3 barrelPosition = transform.position;
+        Vector3 barrelPosition = rotateFire.transform.position;
 
-        // Düþman hedefinin yönüne doðru bakma
         Vector3 targetDirection = enemy.position - barrelPosition;
         float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
 
-        // Namlunun yavaþça düþman hedefine doðru dönmesi
+        Quaternion targetRotation = Quaternion.Euler(0f, 0f, targetAngle);
+        rotateFire.transform.rotation = Quaternion.Slerp(rotateFire.transform.rotation, targetRotation, 5 * Time.deltaTime);
+
         if (boat.isFacingRight)
         {
-            Quaternion targetRotation = Quaternion.Euler(0f, 0f, targetAngle);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+             transform.localScale = new Vector2(1,1);
         }
         else
         {
-            Quaternion targetRotation = Quaternion.Euler(0f, 0f, targetAngle + 180);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+            transform.localScale = new Vector2(-1,1);
         }
     }
 }
