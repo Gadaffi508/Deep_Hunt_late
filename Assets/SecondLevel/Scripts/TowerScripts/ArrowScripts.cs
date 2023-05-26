@@ -5,10 +5,12 @@ using UnityEngine;
 public class ArrowScripts : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     [Header("Attributes")]
-    [SerializeField] private float rowSpeed = 5f;
+    public float rowSpeed = 5f;
+    public int Damage;
+    public string Name;
 
     private Transform target;
 

@@ -8,8 +8,6 @@ public class Try : BoatTowerController
 {
     [Header("Text")]
     public GameObject gun›nformation;
-    public Text Strengh;
-    public Text Speed;
 
     [Space]
     [Header("Controller")]
@@ -19,9 +17,6 @@ public class Try : BoatTowerController
     private void Start()
     {
         gun›nformation = GameObject.FindGameObjectWithTag("Panel").gameObject.GetComponent<RectTransform>().gameObject;
-        Speed = GameObject.FindGameObjectWithTag("Text1").gameObject.GetComponent<Text>();
-        Strengh = GameObject.FindGameObjectWithTag("Text2").gameObject.GetComponent<Text>();
-
     }
 
     public override void CloseTower()
@@ -34,8 +29,6 @@ public class Try : BoatTowerController
         if (gun›nformation != null)
         {
             gun›nformation.transform.DOMoveY(900, 1);
-            Speed.text = "Gun Speed : " + _Speed;
-            Strengh.text = "Gun Strengh : " + _Strengh;
 
         }
     }
