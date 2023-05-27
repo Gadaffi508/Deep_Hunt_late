@@ -6,30 +6,28 @@ using UnityEngine.UI;
 
 public class Try : BoatTowerController
 {
-    [Header("Text")]
-    public GameObject gun›nformation;
+    private ArcherTower tower;
 
-    [Space]
-    [Header("Controller")]
-    public float _Speed = 5;
-    public float _Strengh = 30;
+    [Header("Text")]
+    public GameObject gunInfoPanel;
 
     private void Start()
     {
-        gun›nformation = GameObject.FindGameObjectWithTag("Panel").gameObject.GetComponent<RectTransform>().gameObject;
+        tower = transform.GetComponentInParent<ArcherTower>();
+        gunInfoPanel = GameObject.FindGameObjectWithTag("Panel").gameObject;
     }
 
     public override void CloseTower()
     {
-        gun›nformation.transform.DOMoveY(1500, 1);
+        gunInfoPanel.transform.DOMoveY(1500, 1);
     }
 
     public override void TowerBuilt()
     {
-        if (gun›nformation != null)
+        if (gunInfoPanel != null)
         {
-            gun›nformation.transform.DOMoveY(900, 1);
-
+            gunInfoPanel.transform.DOMoveY(900, 1);
+            gunInfoPanel.GetComponentInChildren<ButtonController>().SetTower(tower);
         }
     }
 }

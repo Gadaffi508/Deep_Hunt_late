@@ -515,19 +515,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 236913108}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 236913110}
-        m_TargetAssemblyTypeName: ButonTop, Assembly-CSharp
-        m_MethodName: TextBulletButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &236913108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,15 +563,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 236913105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a05876dae7311f4b9c0100cc7f63037, type: 3}
+  m_Script: {fileID: 11500000, guid: 274e97348036a68479b671f1c6dbcc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 11400000, guid: c67014cdbb054b44e8103eeb3d0e7964, type: 2}
-  ButtonName: {fileID: 104114707}
-  GunSpeed: {fileID: 5548047143899869527}
-  GunDamage: {fileID: 5548047145824042568}
-  GunName: {fileID: 5548047145415002677}
-  thisButton: {fileID: 236913108}
+  bullet: {fileID: 11400000, guid: c67014cdbb054b44e8103eeb3d0e7964, type: 2}
+  BulletSprite: {fileID: 236913108}
 --- !u!1 &307261058
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,19 +652,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 307261061}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 307261063}
-        m_TargetAssemblyTypeName: ButonTop, Assembly-CSharp
-        m_MethodName: TextBulletButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &307261061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,15 +700,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 307261058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a05876dae7311f4b9c0100cc7f63037, type: 3}
+  m_Script: {fileID: 11500000, guid: 274e97348036a68479b671f1c6dbcc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 11400000, guid: 6b060e85be096a646b87a45d30c06779, type: 2}
-  ButtonName: {fileID: 368548046}
-  GunSpeed: {fileID: 5548047143899869527}
-  GunDamage: {fileID: 5548047145824042568}
-  GunName: {fileID: 5548047145415002677}
-  thisButton: {fileID: 307261061}
+  bullet: {fileID: 11400000, guid: 6b060e85be096a646b87a45d30c06779, type: 2}
+  BulletSprite: {fileID: 307261061}
 --- !u!1 &368548044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,19 +1099,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 679863479}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 679863481}
-        m_TargetAssemblyTypeName: ButonTop, Assembly-CSharp
-        m_MethodName: TextBulletButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &679863479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1191,15 +1147,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 679863476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a05876dae7311f4b9c0100cc7f63037, type: 3}
+  m_Script: {fileID: 11500000, guid: 274e97348036a68479b671f1c6dbcc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 11400000, guid: c67014cdbb054b44e8103eeb3d0e7964, type: 2}
-  ButtonName: {fileID: 1336206302}
-  GunSpeed: {fileID: 5548047143899869527}
-  GunDamage: {fileID: 5548047145824042568}
-  GunName: {fileID: 5548047145415002677}
-  thisButton: {fileID: 679863479}
+  bullet: {fileID: 11400000, guid: c67014cdbb054b44e8103eeb3d0e7964, type: 2}
+  BulletSprite: {fileID: 679863479}
 --- !u!1 &721209677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1247,7 @@ GameObject:
   - component: {fileID: 1217006312}
   - component: {fileID: 1217006311}
   - component: {fileID: 1217006310}
+  - component: {fileID: 1217006313}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1368,6 +1321,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217006313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217006309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1300316921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,19 +1825,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1488247530}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1488247532}
-        m_TargetAssemblyTypeName: ButonTop, Assembly-CSharp
-        m_MethodName: TextBulletButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1488247530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1899,15 +1873,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488247527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a05876dae7311f4b9c0100cc7f63037, type: 3}
+  m_Script: {fileID: 11500000, guid: 274e97348036a68479b671f1c6dbcc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 11400000, guid: 6b060e85be096a646b87a45d30c06779, type: 2}
-  ButtonName: {fileID: 212901186}
-  GunSpeed: {fileID: 5548047143899869527}
-  GunDamage: {fileID: 5548047145824042568}
-  GunName: {fileID: 5548047145415002677}
-  thisButton: {fileID: 1488247530}
+  bullet: {fileID: 11400000, guid: 6b060e85be096a646b87a45d30c06779, type: 2}
+  BulletSprite: {fileID: 1488247530}
 --- !u!1 &1620659212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,19 +1962,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1620659215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1620659217}
-        m_TargetAssemblyTypeName: ButonTop, Assembly-CSharp
-        m_MethodName: TextBulletButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1620659215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2052,15 +2010,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1620659212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a05876dae7311f4b9c0100cc7f63037, type: 3}
+  m_Script: {fileID: 11500000, guid: 274e97348036a68479b671f1c6dbcc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 11400000, guid: 6b060e85be096a646b87a45d30c06779, type: 2}
-  ButtonName: {fileID: 1907103943}
-  GunSpeed: {fileID: 5548047143899869527}
-  GunDamage: {fileID: 5548047145824042568}
-  GunName: {fileID: 5548047145415002677}
-  thisButton: {fileID: 1620659215}
+  bullet: {fileID: 11400000, guid: 6b060e85be096a646b87a45d30c06779, type: 2}
+  BulletSprite: {fileID: 1620659215}
 --- !u!1 &1684590934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,6 +2104,7 @@ GameObject:
   - component: {fileID: 1758169030}
   - component: {fileID: 1758169029}
   - component: {fileID: 1758169028}
+  - component: {fileID: 1758169031}
   m_Layer: 5
   m_Name: TopPanel
   m_TagString: Untagged
@@ -2245,6 +2200,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758169026}
   m_CullTransparentMesh: 1
+--- !u!114 &1758169031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758169026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a05876dae7311f4b9c0100cc7f63037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonName: {fileID: 0}
+  GunSpeed: {fileID: 5548047143899869527}
+  GunDamage: {fileID: 5548047145824042568}
+  GunName: {fileID: 5548047145415002677}
+  allButtons:
+  - {fileID: 1620659217}
+  - {fileID: 1488247532}
+  - {fileID: 307261063}
+  - {fileID: 2099592892}
+  - {fileID: 679863481}
+  - {fileID: 236913110}
 --- !u!1 &1864615793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,19 +2688,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2099592890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2099592892}
-        m_TargetAssemblyTypeName: ButonTop, Assembly-CSharp
-        m_MethodName: TextBulletButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2099592890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2770,15 +2736,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099592887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a05876dae7311f4b9c0100cc7f63037, type: 3}
+  m_Script: {fileID: 11500000, guid: 274e97348036a68479b671f1c6dbcc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 11400000, guid: c67014cdbb054b44e8103eeb3d0e7964, type: 2}
-  ButtonName: {fileID: 197306265}
-  GunSpeed: {fileID: 5548047143899869527}
-  GunDamage: {fileID: 5548047145824042568}
-  GunName: {fileID: 5548047145415002677}
-  thisButton: {fileID: 2099592890}
+  bullet: {fileID: 11400000, guid: c67014cdbb054b44e8103eeb3d0e7964, type: 2}
+  BulletSprite: {fileID: 2099592890}
 --- !u!222 &5548047143899869524
 CanvasRenderer:
   m_ObjectHideFlags: 0

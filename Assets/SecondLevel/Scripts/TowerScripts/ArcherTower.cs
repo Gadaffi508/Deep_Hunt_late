@@ -14,9 +14,6 @@ public class ArcherTower : MonoBehaviour
 
     public float nextPrefab;
 
-    public float sagaDonmeAcisi = 20f;
-    public float solaDonmeAcisi = 120f;
-
     BoatController boat;
 
     private void Start()
@@ -63,6 +60,7 @@ public class ArcherTower : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, OverlapRadius);
     }
+
     public void ProjectTileFire(Transform target)
     {
         GameObject row = Bullet.InstateBullet(FirePos);
