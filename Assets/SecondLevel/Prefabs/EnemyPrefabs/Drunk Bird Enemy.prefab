@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8719917356244087517}
   - component: {fileID: 8719917356244087516}
   - component: {fileID: 8243840307448808800}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Drunk Bird Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Constraints: 0
 --- !u!95 &8719917356244087516
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -145,8 +145,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &8243840307448808800
 BoxCollider2D:
   m_ObjectHideFlags: 0

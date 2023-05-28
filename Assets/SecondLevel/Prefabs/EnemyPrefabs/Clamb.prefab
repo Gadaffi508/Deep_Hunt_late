@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 749815284613099193}
   - component: {fileID: 749815284613099194}
   - component: {fileID: 749815284613099197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Clamb
   m_TagString: Clamb
   m_Icon: {fileID: 0}

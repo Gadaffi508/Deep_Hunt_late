@@ -338,7 +338,7 @@ PrefabInstance:
     - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
       propertyPath: Tower
       value: 
-      objectReference: {fileID: 21210942353340201, guid: feba35efb72532942992bd1b579bfad7, type: 3}
+      objectReference: {fileID: 21210942353340201, guid: 7c555047a124dd9428a516b44a15f219, type: 3}
     - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
       propertyPath: OpenTowerObject.m_Bits
       value: 576

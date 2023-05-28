@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6318324546633115607}
   - component: {fileID: 2658572946455380324}
   - component: {fileID: 9005892076761761655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SwimEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   EnemyAttack: 15
 --- !u!95 &2658572946455380324
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -159,8 +159,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &9005892076761761655
 BoxCollider2D:
   m_ObjectHideFlags: 0
