@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class BuilTower : MonoBehaviour
 {
     public GameObject towerP;
-    public SpriteRenderer TowerRenderer;
+    public Sprite TowerRenderer;
     public Image TowerSprite;
 
     //Events
@@ -23,7 +23,7 @@ public class BuilTower : MonoBehaviour
 
         button.onClick.AddListener(OnClick);
 
-        //TowerSprite.sprite = TowerRenderer.sprite;
+        TowerSprite.sprite = TowerRenderer;
     }
     //Mouse on click
     public void OnClick()
