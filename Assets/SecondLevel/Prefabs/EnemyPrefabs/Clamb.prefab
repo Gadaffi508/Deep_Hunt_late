@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f223162e2d1cac46b1f52984db31841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 3563619576150474143, guid: 2beda5b7fb0a1904aa8cbe7c52c91cc9, type: 3}
   speed: 250
 --- !u!50 &749815284613099194
 Rigidbody2D:
@@ -132,7 +132,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

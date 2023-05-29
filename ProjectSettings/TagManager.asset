@@ -19,6 +19,7 @@ TagManager:
   - KrekenArm
   - Drunk
   - EnemyArrow
+  - Water
   layers:
   - Default
   - TransparentFX

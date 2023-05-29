@@ -35,22 +35,23 @@ public class ClambEnemy : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        //if (collision.gameObject.CompareTag("Ship"))
-        //{
-        //    speed = 0;
-        //    collision.transform.parent = transform;
+        if (collision.gameObject.CompareTag("Ship"))
+        {
+            speed = 0;
+            //collision.transform.parent = transform;
 
-        //}
+        }
         rb.velocity = new Vector2(rb.velocity.x, speed * Time.deltaTime);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Sea"))
+        if (collision.gameObject.CompareTag("Water"))
         {
             speed = 0;
             rb.velocity = new Vector2(rb.velocity.x, 0);
         }
     }
+
 
 
 }
