@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4061449317861404778}
   - component: {fileID: 4061449317861404779}
   - component: {fileID: 186455519827088929}
+  - component: {fileID: -6367654190487242451}
   m_Layer: 8
   m_Name: EnemyGround
   m_TagString: Enemy
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 14
   m_Sprite: {fileID: 21300000, guid: 75b583b71e68ad1409275edfd41d80cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,8 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4061449317861404779}
-  target: {fileID: 3541845215510318495, guid: 58abf2de68685ef47963eccd97ce786a, type: 3}
-  moveSpeed: 100
+  target: {fileID: 3563619576150474143, guid: 2beda5b7fb0a1904aa8cbe7c52c91cc9, type: 3}
+  moveSpeed: 65
   prevMoveSpeed: 0
 --- !u!61 &4061449317861404778
 BoxCollider2D:
@@ -171,3 +172,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6367654190487242451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4061449317861404780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c327dd80d724ae41bb8ab5ad2295f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: 48
+  EnemyAttack: 12

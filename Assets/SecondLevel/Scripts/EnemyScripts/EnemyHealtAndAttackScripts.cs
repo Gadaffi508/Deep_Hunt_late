@@ -14,22 +14,16 @@ public class EnemyHealtAndAttackScripts : MonoBehaviour
         currentHealth = EnemyHealth;
     }
 
-    private void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
       
         if (currentHealth <= 0)
         {
             BoatController.current.gold += 20;
-            Destroy(gameObject,0.5f);
+            Destroy(gameObject);
 
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Arrow"))
-        {
-            TakeDamage(20);
-        }
-    }
+ 
 }

@@ -17,11 +17,13 @@ public class SpawnController : MonoBehaviour
     [Header("Enemys")]
     [SerializeField] private GameObject enemyFLY;
     [SerializeField] private GameObject enemySwim;
+    [SerializeField] private GameObject enemyLittleSwim;
     [SerializeField] private GameObject enemyClamb;
     [SerializeField] private GameObject drunkEnemy;
 
     [Header("WaveNumber")]
     [SerializeField] private int swimEnemy;
+    [SerializeField] private int littleSwim;
     [SerializeField] private int flyEnemy;
     [SerializeField] private int clambEnemy;
 
@@ -43,44 +45,58 @@ public class SpawnController : MonoBehaviour
               
                 if (i <= howManyWaves / 2)
                 {
-                    for (int c = 0; c < swimEnemy; c++)
+                    for (int c = 0; c < littleSwim; c++)
+                    {
+                        random = Random.Range(0, spawnPointsSwim.Length);
+                        Instantiate(enemyLittleSwim, spawnPointsSwim[random].position, Quaternion.identity);
+                        random1 = Random.Range(0, 15);
+                        //if (random == 3)
+                        //{
+                        //    Instantiate(drunkEnemy, spawnPointsFLY[random].position, Quaternion.identity);
+                        //}
+                        yield return new WaitForSeconds(1.75f);
+                    }
+                    for (int e = 0; e < swimEnemy; e++)
                     {
                         random = Random.Range(0, spawnPointsSwim.Length);
                         Instantiate(enemySwim, spawnPointsSwim[random].position, Quaternion.identity);
-                        random1 = Random.Range(0, 5);
-                        if (random == 3)
-                        {
-                            Instantiate(drunkEnemy, spawnPointsFLY[random].position, Quaternion.identity);
-                        }
-                        yield return new WaitForSeconds(1f);
+                       
+                        random1 = Random.Range(0, 15);
+                        //if (random == 3)
+                        //{
+                        //    Instantiate(drunkEnemy, spawnPointsFLY[random].position, Quaternion.identity);
+                        //}
+                        yield return new WaitForSeconds(2.75f);
                     }
                 }
                 else if (i >= howManyWaves / 2)
                 {
+                   
                     for (int c = 0; c < swimEnemy; c++)
                     {
                         random = Random.Range(0, spawnPointsSwim.Length);
                         Instantiate(enemySwim, spawnPointsSwim[random].position, Quaternion.identity);
-                        random1 = Random.Range(0, 5);
-                        if (random1 == 3)
-                        {
-                            Instantiate(drunkEnemy, spawnPointsFLY[random].position, Quaternion.identity);
-                        }
-                        yield return new WaitForSeconds(1f);
+                        random1 = Random.Range(0, 15);
+                        //if (random1 == 3)
+                        //{
+                        //    Instantiate(drunkEnemy, spawnPointsFLY[random].position, Quaternion.identity);
+                        //}
+                        yield return new WaitForSeconds(2f);
                     }
-                    yield return new WaitForSeconds(2f);
+                    yield return new WaitForSeconds(2.75f);
                     for (int a = 0; a < flyEnemy; a++)
                     {
                         random = Random.Range(0, spawnPointsFLY.Length);
                         Instantiate(enemyFLY, spawnPointsFLY[random].position, Quaternion.identity);
-                        random1 = Random.Range(0, 5);
-                        if (random1 == 3)
-                        {
-                            Instantiate(drunkEnemy, spawnPointsFLY[random].position, Quaternion.identity);
-                        }
-                        yield return new WaitForSeconds(1f);
+                        random1 = Random.Range(0, 15);
+                        //if (random1 == 3)
+                        //{
+                        //    Instantiate(drunkEnemy, spawnPointsFLY[random].position, Quaternion.identity);
+                        //}
+                        yield return new WaitForSeconds(1.5f);
                     }
                 }
+                Instantiate(drunkEnemy, spawnPointsFLY[random].position, Quaternion.identity);
                 yield return new WaitForSeconds(timeBetweenWaves);
             }
         }

@@ -27,10 +27,20 @@ public class FlyEnemy : MonoBehaviour
     private void Start()
     {
         enemyMove = GetComponent<EnemyMove>();
+
+        Physics2D.queriesStartInColliders = true;
     }
     void Update()
     {
-       
+        if (transform.position.x > ship.position.x)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (transform.position.x < ship.position.x)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
         if (target == null)
         {
             FindTarget();

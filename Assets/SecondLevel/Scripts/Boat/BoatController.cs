@@ -93,6 +93,17 @@ public class BoatController : MonoBehaviour
             other.transform.parent = transform;
             Destroy(other.rigidbody);
         }
+        if (other.gameObject.CompareTag("EnemyArrow"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyArrow"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
     private void Flip()
     {

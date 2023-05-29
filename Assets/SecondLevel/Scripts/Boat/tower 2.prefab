@@ -126,12 +126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5d9536cd7e0a943b6898eec77ba87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OverlapRadius: 6
+  OverlapRadius: 7.3
   nearestEnemy: {fileID: 0}
   rotateFire: {fileID: 621758480841080324}
-  Bullet: {fileID: 11400000, guid: 6b060e85be096a646b87a45d30c06779, type: 2}
+  Bullet: {fileID: 11400000, guid: c67014cdbb054b44e8103eeb3d0e7964, type: 2}
   FirePos: {fileID: 21210941616526318}
-  nextPrefab: 3
+  nextPrefab: 0
 --- !u!1 &6222741901737658172
 GameObject:
   m_ObjectHideFlags: 0

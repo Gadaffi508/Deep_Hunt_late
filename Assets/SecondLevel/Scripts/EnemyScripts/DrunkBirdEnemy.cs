@@ -17,17 +17,19 @@ public class DrunkBirdEnemy : MonoBehaviour
     private Vector2 shipPosition;
     private Vector2 tansformPosition;
     private float Distance;
+    private EnemyHealtAndAttackScripts script;
     void Start()
     {
         Physics2D.queriesStartInColliders = false;
         rb = GetComponent<Rigidbody2D>();
+        script = GetComponent<EnemyHealtAndAttackScripts>();
     }
 
     
     void Update()
     {
-        Move();
 
+        Move();
         RaycastHit2D hit = Physics2D.Raycast(transform.position,Vector2.down,AttackDistance);
 
         if (hit.collider == null)
@@ -52,7 +54,7 @@ public class DrunkBirdEnemy : MonoBehaviour
     private void Move()
     {
 
-
+       
 
         //Vector3 direction = (target.position - transform.position).normalized;
         //transform.position += direction * speed * Time.deltaTime;
@@ -71,13 +73,10 @@ public class DrunkBirdEnemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, tansformPosition, MoveSpeed * Time.deltaTime);
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
-
     private void Attack()
     {
         rb.velocity = new Vector2(rb.velocity.x,-Force * Time.deltaTime);
     }
+  
+  
 }

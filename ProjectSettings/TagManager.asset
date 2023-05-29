@@ -17,6 +17,8 @@ TagManager:
   - healthText
   - Text3
   - KrekenArm
+  - Drunk
+  - EnemyArrow
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - gun
   - Enemy
   - Ship
-  - 
+  - Drunk
   - 
   - 
   - 

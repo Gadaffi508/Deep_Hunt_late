@@ -15,13 +15,16 @@ public class EnemyMove : MonoBehaviour
 
 
     public float prevMoveSpeed;
+    private EnemyHealtAndAttackScripts script;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        script = GetComponent<EnemyHealtAndAttackScripts>();
     }
 
     void Start()
     {
+        Physics2D.queriesStartInColliders = true;
         prevMoveSpeed = moveSpeed;
         if (transform.position.x > target.position.x)
         {
@@ -36,6 +39,7 @@ public class EnemyMove : MonoBehaviour
     }
     private void Update()
     {
+
         prevMoveSpeed = moveSpeed;
     }
     // Update is called once per frame
@@ -43,4 +47,6 @@ public class EnemyMove : MonoBehaviour
     {
         rb.velocity = new Vector2(moveSpeed * Time.deltaTime,rb.velocity.y);
     }
+
+   
 }
