@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,47 +10,40 @@ public class ClambEnemy : MonoBehaviour
 
     [Header("Attribute")]
     [SerializeField] private float speed;
+    [SerializeField] private float maxHeight = -5.5f;
+    [Space]
+    [SerializeField] private int damage;
 
     private Rigidbody2D rb;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
-        
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ship"))
+        rb.velocity = Vector2.zero;
+        if(transform.position.y < maxHeight)
         {
-            speed = 0;
+            rb.velocity = -Vector2.down * speed;
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    public void OnTrigger(BoatController boat)
     {
+        //Set Damage
+        boat.DamageSlow(damage);
 
-        if (collision.gameObject.CompareTag("Ship"))
-        {
-            speed = 0;
+        //SetParent
+        transform.SetParent(boat.gameObject.transform);
 
-        }
-        //rb.velocity = new Vector2(rb.velocity.x, speed * Time.deltaTime);
+        //Set Static
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        speed = 0;
+
+        Destroy(this);
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Water"))
-        {
-            speed = 0;
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-        }
-    }
-
-
-
 }

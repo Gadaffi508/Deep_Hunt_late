@@ -104,7 +104,7 @@ public class BoatController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Clamb"))
         {
-            collision.gameObject.transform.parent = transform;
+            collision.gameObject.GetComponent<ClambEnemy>().OnTrigger(this);
         }
 
     }
