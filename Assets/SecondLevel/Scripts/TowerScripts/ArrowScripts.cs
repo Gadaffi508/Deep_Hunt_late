@@ -17,9 +17,9 @@ public class ArrowScripts : MonoBehaviour
 
     private void Start()
     {
-        script = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyHealtAndAttackScripts>();
-        
-        Destroy(gameObject,1.5f);
+        //script = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyHealtAndAttackScripts>();
+
+        Destroy(gameObject, 1.5f);
     }
 
     public void SetTarget(Transform _target)
@@ -28,19 +28,26 @@ public class ArrowScripts : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, rowSpeed * Time.deltaTime);
-        if (!target) Destroy(gameObject);
-       
+        if (target)
+        {
+            
+            transform.position = Vector2.MoveTowards(transform.position, target.position, rowSpeed * Time.deltaTime);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
-   
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             script.TakeDamage(script.EnemyAttack);
-           Destroy(gameObject);
+            Destroy(gameObject);
         }
-       
+
         if (collision.gameObject.CompareTag("Ship"))
         {
             Destroy(gameObject);

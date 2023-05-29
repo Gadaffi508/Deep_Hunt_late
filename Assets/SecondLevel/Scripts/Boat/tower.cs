@@ -1,19 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class tower : BoatTowerController
 {
-    public GameObject Tower;
+    public GameObject TowerPanel;
+
+    private void Start()
+    {
+        TowerPanel = GameObject.FindGameObjectWithTag("PanelTwo").gameObject;
+    }
 
     public override void CloseTower()
     {
-       
+        if (TowerPanel != null)
+            TowerPanel.transform.DOMoveY(1500, 1);
     }
 
     public override void TowerBuilt()
     {
-        Instantiate(Tower,transform.position,Quaternion.identity);
-        Destroy(gameObject);
+        if (TowerPanel != null)
+            TowerPanel.transform.DOMoveY(950,1);
+    }
+
+    public GameObject TowerBuilt(GameObject _Tower)
+    {
+        return Instantiate(_Tower,transform.position,Quaternion.identity);
     }
 }

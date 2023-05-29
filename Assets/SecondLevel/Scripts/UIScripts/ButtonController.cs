@@ -46,7 +46,7 @@ public class ButtonController : MonoBehaviour
     {
         if(currentTower != null)
         {
-           // currentTower.Bullet = bullet;
+           currentTower.Bullet = bullet;
         }
     }
 }

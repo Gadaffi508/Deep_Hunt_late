@@ -28,7 +28,6 @@ public class ClambEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Ship"))
         {
             speed = 0;
-            //transform.position = new Vector2(target.position.x,transform.position.y);
         }
     }
 
@@ -38,10 +37,9 @@ public class ClambEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Ship"))
         {
             speed = 0;
-            //collision.transform.parent = transform;
 
         }
-        rb.velocity = new Vector2(rb.velocity.x, speed * Time.deltaTime);
+        //rb.velocity = new Vector2(rb.velocity.x, speed * Time.deltaTime);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

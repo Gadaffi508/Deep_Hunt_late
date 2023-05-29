@@ -99,11 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92310f7361d66af438ec5a626dfe2d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1608807082651561862, guid: 5494c42585c79ed4899dbb0b667346ca, type: 3}
   shipLayer:
     serializedVersion: 2
     m_Bits: 256
-  Ship: {fileID: 0}
+  Ship: {fileID: 1608807082651561915, guid: 5494c42585c79ed4899dbb0b667346ca, type: 3}
   attackRange: 5
   Force: 0.1
   Speed: 250

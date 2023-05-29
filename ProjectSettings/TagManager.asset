@@ -20,6 +20,7 @@ TagManager:
   - Drunk
   - EnemyArrow
   - Water
+  - PanelTwo
   layers:
   - Default
   - TransparentFX

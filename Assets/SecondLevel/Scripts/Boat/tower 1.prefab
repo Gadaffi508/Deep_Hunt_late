@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 611279807243596331}
   - component: {fileID: -4681316197809774689}
   - component: {fileID: -1063907745731171202}
-  - component: {fileID: 5202143538402469679}
   m_Layer: 7
   m_Name: tower 1
   m_TagString: kuleA
@@ -134,23 +133,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5202143538402469679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4942850376932654495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b30976b70c0644d89414107342cd9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OpenTowerObject:
-    serializedVersion: 2
-    m_Bits: 128
-  "gun\u0130nformation": {fileID: 3170739099027609379, guid: bc639704dc72253498bb41181aa4f615, type: 3}
-  Strengh: {fileID: 2737182936203338213, guid: 5c0f9d1f1fd6fd747af29ac9dd1d5495, type: 3}
-  Speed: {fileID: 1479963278938535582, guid: 48c66db5331f4a243a111c06dd819809, type: 3}
-  _Speed: 20
-  _Strengh: 40

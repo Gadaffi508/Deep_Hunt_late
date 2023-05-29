@@ -44,14 +44,15 @@ public class BoatController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontal * speed * Time.deltaTime, rb.velocity.y);
 
-        //if (horizontal > 0 && !isFacingRight)
-        //{
-        //    Flip();
-        //}
-        //else if (horizontal < 0 && isFacingRight)
-        //{
-        //    Flip();
-        //} transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        if (horizontal > 0 && !isFacingRight)
+        {
+            Flip();
+        }
+        else if (horizontal < 0 && isFacingRight)
+        {
+            Flip();
+        }
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
     public void Regeneraiton()
     {
@@ -97,18 +98,15 @@ public class BoatController : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("EnemyArrow"))
-        {
-            Destroy(collision.gameObject);
-        }
-
         if (collision.gameObject.CompareTag("Clamb"))
         {
-            collision.transform.parent = transform;
+            collision.gameObject.transform.parent = transform;
         }
+
     }
     private void Flip()
     {

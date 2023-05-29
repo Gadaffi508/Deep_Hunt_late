@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608807082651561915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 25.30006, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -208,7 +208,11 @@ PrefabInstance:
     - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
       propertyPath: Tower
       value: 
-      objectReference: {fileID: 21210942353340201, guid: feba35efb72532942992bd1b579bfad7, type: 3}
+      objectReference: {fileID: 4377380877103921424}
+    - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
+      propertyPath: TowerPanel
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
       propertyPath: OpenTowerObject.m_Bits
       value: 576
@@ -279,6 +283,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
+--- !u!1 &4377380877103921424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4601126088691743105, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
+  m_PrefabInstance: {fileID: 244865070098350225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5217206123774869818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5405113573087445419, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
@@ -318,7 +327,7 @@ PrefabInstance:
     - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
       propertyPath: Tower
       value: 
-      objectReference: {fileID: 21210942353340201, guid: feba35efb72532942992bd1b579bfad7, type: 3}
+      objectReference: {fileID: 3308405704515017976}
     - target: {fileID: 3954392928423851274, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
       propertyPath: OpenTowerObject.m_Bits
       value: 576
@@ -393,6 +402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
+--- !u!1 &3308405704515017976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4601126088691743105, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}
+  m_PrefabInstance: {fileID: 1311579629739222393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6427050708939023570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5405113573087445419, guid: 35465114f45f21343bbc7879a8bc823c, type: 3}

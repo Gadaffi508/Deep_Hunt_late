@@ -33,7 +33,7 @@ public class SpawnController : MonoBehaviour
     private bool WaveCheck;
     void Start()
     {
-        StartCoroutine("Timer");
+        StartCoroutine(Timer());
        
     }
     IEnumerator Timer()
@@ -100,8 +100,8 @@ public class SpawnController : MonoBehaviour
                 yield return new WaitForSeconds(timeBetweenWaves);
             }
         }
-      
-        StartCoroutine("Timer");
+
+        StartCoroutine(Timer());
 
     }
 }
