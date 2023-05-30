@@ -75,8 +75,21 @@ public class ArcherTower : MonoBehaviour
         Vector3 targetDirection = enemy.position - barrelPosition;
         float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
 
-        Quaternion targetRotation = Quaternion.Euler(0f, 0f, targetAngle);
-        rotateFire.transform.rotation = Quaternion.Slerp(rotateFire.transform.rotation, targetRotation, 5 * Time.deltaTime);
+        rotateFire.rotation = Quaternion.Euler(0f, 0f, targetAngle);
+
+        if (targetAngle < -90 || targetAngle > 90)
+        {
+
+            if (rotateFire.transform.eulerAngles.y == 0)
+            {
+                rotateFire.transform.localRotation = Quaternion.Euler(180, 0, -targetAngle);
+            }
+            else if (rotateFire.transform.eulerAngles.y == 180)
+            {
+                rotateFire.transform.localRotation = Quaternion.Euler(180, 180, -targetAngle);
+            }
+
+        }
 
         if (boat.isFacingRight)
         {
