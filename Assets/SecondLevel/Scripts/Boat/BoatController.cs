@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class BoatController : MonoBehaviour
 {
-    public static BoatController current;
     [Header("Controller")]
     [Space]
     public Rigidbody2D rb;
@@ -30,17 +29,14 @@ public class BoatController : MonoBehaviour
 
     private void Awake()
     {
-        GoldText = GameObject.FindGameObjectWithTag("Gold").gameObject.GetComponent<Text>();
-        healthText = GameObject.FindGameObjectWithTag("healthText").gameObject.GetComponent<Text>();
-        current = this;
         rb = GetComponent<Rigidbody2D>();
+
+        GameManager.Instance.Health = Health;
+        GameManager.Instance.Gold = gold;
     }
 
     void FixedUpdate()
     {
-        healthText.text = "Boat Health :" + Health.ToString();
-        GoldText.text = "Gold : " + gold.ToString();
-
         float horizontal = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontal * speed * Time.deltaTime, rb.velocity.y);
 

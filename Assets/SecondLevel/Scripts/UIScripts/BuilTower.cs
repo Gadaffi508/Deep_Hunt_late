@@ -16,9 +16,12 @@ public class BuilTower : MonoBehaviour
 
     //private variables
     private Button button;
+    TowerS towerGold;
 
     private void Start()
     {
+        towerGold = GetComponent<TowerS>();
+
         button = GetComponent<Button>();
 
         button.onClick.AddListener(OnClick);
@@ -28,7 +31,17 @@ public class BuilTower : MonoBehaviour
     //Mouse on click
     public void OnClick()
     {
-        if (OnButtonClick != null)
-            OnButtonClick(towerP);
+        if (GameManager.Instance.Gold >= towerGold.buyTower)
+        {
+            if (OnButtonClick != null)
+            {
+                OnButtonClick(towerP);
+            }
+            towerGold.BuyTower();
+        }
+        else
+        {
+            Debug.Log("No money");
+        }
     }
 }
