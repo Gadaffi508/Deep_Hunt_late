@@ -11,7 +11,6 @@ public class ArcherTower : MonoBehaviour
 
     public BulletScriptable Bullet;
     public Transform FirePos;
-    public Transform BulletRotate;
 
     public float nextPrefab;
 
@@ -64,7 +63,7 @@ public class ArcherTower : MonoBehaviour
 
     public void ProjectTileFire(Transform target)
     {
-        GameObject row = Bullet.InstateBullet(FirePos, BulletRotate);
+        GameObject row = Bullet.InstateBullet(FirePos);
         ArrowScripts arrowScripts = row.GetComponent<ArrowScripts>();
         arrowScripts.SetTarget(target);
 

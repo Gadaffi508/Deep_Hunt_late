@@ -33,7 +33,7 @@ public class tower : BoatTowerController
     public GameObject TowerBuilt(GameObject _Tower)
     {
         CloseTower();
-        Destroy(gameObject); 
+        Destroy(gameObject); //hm anladým mantýklý evet o zaman silinsin bu þekilde aynen hatda
         return Instantiate(_Tower,transform.position,Quaternion.identity);
     }
 }

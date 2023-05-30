@@ -10,8 +10,8 @@ public class BulletScriptable : ScriptableObject
     public SpriteRenderer spt;
     public ArrowScripts bulletCurrent;
 
-    public GameObject InstateBullet(Transform bulletPos,Transform Rotate)
+    public GameObject InstateBullet(Transform bulletPos)
     {
-        return Instantiate(bullet, bulletPos.position, Rotate.rotation);
+        return Instantiate(bullet, bulletPos.position,bulletPos.rotation);
     }
 }

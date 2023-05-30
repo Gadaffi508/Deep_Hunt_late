@@ -47,12 +47,21 @@ public class ArrowScripts : MonoBehaviour
             script.TakeDamage(script.EnemyAttack);
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Ship"))
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             script.TakeDamage(script.EnemyAttack);
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Ship"))
+        {
             Destroy(gameObject);
         }
     }

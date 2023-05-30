@@ -20,7 +20,7 @@ public class EnemyHealtAndAttackScripts : MonoBehaviour
       
         if (currentHealth <= 0)
         {
-            GameManager.Instance.Gold += 20;
+            BoatController.current.gold += 20;
             Destroy(gameObject);
 
         }

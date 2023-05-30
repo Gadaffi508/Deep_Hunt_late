@@ -5,8 +5,8 @@ using UnityEngine;
 public class TowerS : MonoBehaviour
 {
     public int buyTower;
-    public void BuyTower()
+    void Start()
     {
-        GameManager.Instance.Gold -= buyTower;
+        BoatController.current.gold -= buyTower;
     }
 }
