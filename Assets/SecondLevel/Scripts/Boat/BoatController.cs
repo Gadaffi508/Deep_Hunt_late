@@ -44,14 +44,14 @@ public class BoatController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontal * speed * Time.deltaTime, rb.velocity.y);
 
-        //if (horizontal > 0 && !isFacingRight)
-        //{
-        //    Flip();
-        //}
-        //else if (horizontal < 0 && isFacingRight)
-        //{
-        //    Flip();
-        //} transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        if (horizontal > 0 && !isFacingRight)
+        {
+            Flip();
+        }
+        else if (horizontal < 0 && isFacingRight)
+        {
+            Flip();
+        } transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
     public void Regeneraiton()
     {
